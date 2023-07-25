@@ -27,4 +27,11 @@ public class Flight {
     public int countPassengers(){
         return this.passengers.size();
     }
+    public void setFlightID(String newFlightID){
+        this.flightID = newFlightID;
+    }
+
+    public void setDestination(String newDestination){
+        this.destination = newDestination;
+    }
 }
