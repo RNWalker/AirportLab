@@ -1,19 +1,30 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
+
 public class PassengerTest {
 
-    Passenger passenger = new Passenger;
+    Passenger passenger;
 
-//    passenger = (passenger details)
+    @BeforeEach
+    public void setUp(){
+        passenger = new Passenger ("Jannah", 0756563421, 123);
+    }
 
-//    @Test
-//    public String canGetName(){
-//    passenger.getName()
+    @Test
+    public void canGetName(){
+        assertThat(passenger.getName()).isEqualTo("Jannah");
+    }
 
-    //    @Test
-//    public int canGetPhoneNumber()
-//    passenger.getPhoneNumber()
 
-    //    @Test
-//    public int canGetUniqueID()
-//    passenger.getUniqueID()
+    @Test
+    public void canGetPhoneNumber(){
+        assertThat(passenger.getPhoneNumber()).isEqualTo(0756563421);
+    }
 
+    @Test
+    public void canGetUniqueID(){
+        assertThat(passenger.getUniqueID()).isEqualTo(123);
+    }
 }
